@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MyJetpackComposeJourney</string>
+
+    <string name="title">My Jetpack Compose Journey</string>
+
+    <string name="description">My journey so far with Jetpack compose has been very insightful. Learning Jetpack Compose has shown me that base Android development had many more issues
+        that I realised, and even through the short time we have been using Jetpack Compose I am clearly able to see its benefits and ease of use. I believe these few months we have
+         been learning Jetpack Compose has been incredible helpful and useful for improving our overall skills at Android Development</string>
+</resources>
