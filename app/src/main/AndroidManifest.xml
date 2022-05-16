@@ -10,6 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyJetPackComposeJourney">
         <activity
+            android:name=".Navigattion"
+            android:exported="false"
+            android:label="@string/title_activity_navigattion"
+            android:theme="@style/Theme.MyJetPackComposeJourney" />
+        <activity
+            android:name=".Modules"
+            android:exported="false"
+            android:label="@string/title_activity_modules"
+            android:theme="@style/Theme.MyJetPackComposeJourney" />
+        <activity
             android:name=".PersonalDetails"
             android:exported="false"
             android:label="@string/title_activity_personal_details"

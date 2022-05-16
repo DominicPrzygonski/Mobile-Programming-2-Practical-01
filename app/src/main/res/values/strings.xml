@@ -8,4 +8,6 @@
          been learning Jetpack Compose has been incredible helpful and useful for improving our overall skills at Android Development</string>
     <string name="title_activity_personal_details">PersonalDetails</string>
     <string name="Details">Name: Dominic Przygosnki\n\nCourse: Applications Development\n\nDepartment: Information Technology\n\nStudent Number: 219206414</string>
+    <string name="title_activity_modules">Modules</string>
+    <string name="title_activity_navigattion">Navigattion</string>
 </resources>

@@ -1,4 +1,4 @@
-package za.ac.cput
+package za.ac.cput.screens
 
 import android.content.Intent
 import android.os.Bundle
@@ -28,21 +28,16 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
+import za.ac.cput.NavRoutes
+import za.ac.cput.R
 import za.ac.cput.ui.theme.MyJetPackComposeJourneyTheme
 
 
 
-class PersonalDetails : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContent {
-            Content()
-        }
-    }
-}
 
 @Composable
-fun Content() {
+fun PersonalDetails(navController: NavHostController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -58,14 +53,14 @@ fun Content() {
         verticalArrangement = Arrangement.Center,
 
         ) {
-        Details()
+        Details(navController)
 
     }
 }
 
 
 @Composable
-fun Details(){
+fun Details(navController: NavHostController){
 
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -78,7 +73,7 @@ fun Details(){
                 .padding(10.dp),
 
 
-        ){
+            ){
             Text(
                 text = stringResource(R.string.Details),
                 color = Color.Black,
@@ -93,7 +88,7 @@ fun Details(){
         val context = LocalContext.current
 
         Button(
-            onClick = {},
+            onClick = {navController.navigate(NavRoutes.Modules.route)},
             colors = ButtonDefaults.buttonColors(backgroundColor = colorResource(id = R.color.white)),
             shape = RoundedCornerShape(50),
             elevation = ButtonDefaults.elevation(
@@ -129,7 +124,7 @@ fun Details(){
         Spacer(modifier = Modifier.height(30.dp))
 
         Button(
-            onClick = {context.startActivity(Intent(context, MainActivity::class.java))},
+            onClick = {navController.navigate(NavRoutes.Welcome.route)},
             colors = ButtonDefaults.buttonColors(backgroundColor = colorResource(id = R.color.white)),
             shape = RoundedCornerShape(50),
             elevation = ButtonDefaults.elevation(
@@ -165,10 +160,4 @@ fun Details(){
     }
 }
 
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview2() {
-    MyJetPackComposeJourneyTheme {
-        Content();
-    }
-}
+
